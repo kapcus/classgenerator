@@ -1,0 +1,6 @@
+/output/
+/log/
+/vendor/
+/temp/
+config.local.neon
+/.idea

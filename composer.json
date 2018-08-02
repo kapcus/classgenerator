@@ -1,0 +1,24 @@
+{
+    "name": "kapcus/classgenerator",
+    "version": "0.1.0",
+    "description": "Class Generator of table classes by database structure",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jan Kapciar",
+            "email": "kapciar@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Kapcus\\ClassGenerator\\": "src"
+        }
+    },
+    "require": {
+        "php" : ">=5.6",
+        "dibi/dibi": "^3.1",
+        "nette/di": "^2.3",
+        "symfony/console": "^4.1"
+    }
+}

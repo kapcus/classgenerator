@@ -1,0 +1,25 @@
+parameters:
+	classgenerator:
+		database:
+			driver: oci8
+			host: localhost
+			user: ''
+			password: ''
+			servicename: ''
+			dbname: ''
+			port: 1521
+		outputDirectory: 'output'
+		classNamespace: 'App\Model\Tables'
+		datatypeNamespace: 'App\Model\DataTypes'
+		logDirectory: 'log'
+
+services:
+	- Kapcus\ClassGenerator\Model\Manager(%classgenerator.outputDirectory%, %classgenerator.classNamespace%, %classgenerator.datatypeNamespace%)
+	- Kapcus\ClassGenerator\Model\Configurator(%classgenerator.database%)
+	- Kapcus\ClassGenerator\Model\DibiExecutor(%classgenerator.logDirectory%)
+
+	- Kapcus\ClassGenerator\Model\DatabaseFactory
+
+	# commands
+	- Kapcus\ClassGenerator\Command\CheckCommand
+	- Kapcus\ClassGenerator\Command\GenerateCommand
