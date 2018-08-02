@@ -1,25 +1,24 @@
 parameters:
-	classgenerator:
-		database:
-			driver: oci8
-			host: localhost
-			user: ''
-			password: ''
-			# SID
-			servicename: ''
-			# schema
-			dbname: ''
-			port: 1521
+	database:
+		driver: oci8
+		host: classgenerator-host
+		user: classgenerator-user
+		password: classgenerator-password
+		# SID
+		servicename: classgenerator-sid
+		# schema
+		dbname: classgenerator-dbname
+		port: classgenerator-port
 
-		# namespace that all generated classes will belong to
-		classNamespace: 'App\Model\Tables'
+	# namespace that all generated classes will belong to
+	classNamespace: 'App\Model\Tables'
 
-		# namespace for DataTypes class
-		datatypeNamespace: 'App\Model\DataTypes'
+	# namespace for DataTypes class
+	datatypeNamespace: 'App\Model\DataTypes'
 
-		# folder which classes will be generated into
-		outputDirectory: 'output'
+	# folder which classes will be generated into
+	outputDirectory: 'output'
 
-		# folder for logs and exceptions
-		logDirectory: 'log'
+	# folder for logs and exceptions
+	logDirectory: 'log'
 
