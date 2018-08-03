@@ -221,7 +221,7 @@ class Manager
 				$dataType = $this->typeMapping[$column->getType()][0];
 			} elseif ($column->getType() == 'NUMBER' && $column->getScale() !== null && $column->getScale() != '0') {
 				$dataType = 'FLOAT';
-			} elseif (!defined('\\'.$this->datatypeNamespace.'::' . $dataType)) {
+			} elseif (!defined('\Kapcus\ClassGenerator\Model\DataTypes::' . $dataType)) {
 				$dataType = 'UNKNOWN';
 			}
 			$code .= "\t\tself::F_" . $this->getColumnConstant(
